@@ -9,12 +9,10 @@ export default function homePage () {
 
     let sidebar = document.createElement('div');
     sidebar.classList.add('sidebar');
-    sidebar.textContent = 'sidebar';
     webpage.appendChild(sidebar);
 
     let mainBody = document.createElement('div');
     mainBody.classList.add('mainBody');
-    mainBody.textContent = 'mainBody';
     webpage.appendChild(mainBody);
 
     let footer = document.createElement('div');
