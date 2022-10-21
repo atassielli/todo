@@ -12,6 +12,7 @@ export default function newtask () {
     form.appendChild(nameTitle);
 
     let getName = document.createElement('input');
+    getName.classList.add('name');
     getName.setAttribute('type', 'text');
     getName.setAttribute('id', 'name');
     form.appendChild(getName);
@@ -22,6 +23,7 @@ export default function newtask () {
     form.appendChild(dateTitle);
 
     let getDate = document.createElement('input');
+    getDate.classList.add('date');
     getDate.setAttribute('type', 'date');
     dateTitle.setAttribute('id', 'date');
     form.appendChild(getDate);
@@ -32,6 +34,7 @@ export default function newtask () {
     form.appendChild(projectTitle);
 
     let getProject = document.createElement('input');
+    getProject.classList.add('project');
     getProject.setAttribute('type', 'text');
     getProject.setAttribute('id', 'project');
     form.appendChild(getProject);
