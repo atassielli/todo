@@ -9,6 +9,8 @@ import {priorityFormValidation} from './newtaskValidation.js';
 import Library from './taskLibrary.js';
 import taskCreation from './newTaskCreation.js'
 import {taskLog} from './newTaskCreation.js'
+import visibleTaskList from './visibleTaskList.js';
+import displayAllTasks from './allTaskList';
 
 
 homepage();
@@ -21,13 +23,15 @@ button.addEventListener('click', () => {
     newtask();
     const submit = document.querySelector('.submit');
     submit.addEventListener('click', () => {
-        completeFormValidation();
-        priorityFormValidation();
         if (completeFormValidation() === "pass" && priorityFormValidation() === "pass"){
             taskCreation();
             console.log(taskLog.allTasks)
         } else {
             return
         }
+        const form = document.querySelector('.taskform');
+        form.textContent = ''
+        form.style.cssText = "display: none"
+        displayAllTasks()
     })
 })

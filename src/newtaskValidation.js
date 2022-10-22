@@ -1,8 +1,3 @@
-const name = document.querySelector('.name');
-const date = document.querySelector('.date');
-const project = document.querySelector('.project');
-const priority = document.querySelector('.priority');
-
 export function completeFormValidation() {
     const name = document.querySelector('.name');
     const date = document.querySelector('.date');
@@ -17,9 +12,6 @@ export function completeFormValidation() {
 }
 
 export function priorityFormValidation() {
-    const name = document.querySelector('.name');
-    const date = document.querySelector('.date');
-    const project = document.querySelector('.project');
     const priority = document.querySelector('.priority');
 
     let a = priority.value.toLowerCase()
