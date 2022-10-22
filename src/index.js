@@ -4,9 +4,12 @@ import sidebar from './sidebar.js';
 import mainbody from './mainbody.js';
 import Task from './taskfactory.js';
 import newtask from './newTaskForm.js';
-import newtaskValidation from './newtaskValidation.js';
-import Library from './taskLibrary';
-import taskCreation from './newTaskCreation'
+import {completeFormValidation} from './newtaskValidation.js';
+import {priorityFormValidation} from './newtaskValidation.js';
+import Library from './taskLibrary.js';
+import taskCreation from './newTaskCreation.js'
+import {taskLog} from './newTaskCreation.js'
+
 
 homepage();
 sidebar();
@@ -18,8 +21,13 @@ button.addEventListener('click', () => {
     newtask();
     const submit = document.querySelector('.submit');
     submit.addEventListener('click', () => {
-    newtaskValidation();
-    taskCreation();
+        completeFormValidation();
+        priorityFormValidation();
+        if (completeFormValidation() === "pass" && priorityFormValidation() === "pass"){
+            taskCreation();
+            console.log(taskLog.allTasks)
+        } else {
+            return
+        }
     })
 })
-
