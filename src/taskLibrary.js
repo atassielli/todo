@@ -1,4 +1,5 @@
 import Task from "./taskfactory.js";
+import displayTask from "./displayTask.js";
 
 export default class Library {
     constructor() {
@@ -14,5 +15,15 @@ export default class Library {
     }
     get numberOfTasks() {
         return this.tasks.length
+    }
+    get nameOfTasks() {
+        for (let i = 0; i < this.tasks.length; i++) {
+            console.log(this.tasks[i].name)
+        }
+    }
+    get entireTaskList() {
+       this.tasks.forEach(function(item){
+        displayTask(item.name, item.date, item.project, item.priority)
+       })
     }
 }

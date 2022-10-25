@@ -32,6 +32,7 @@ button.addEventListener('click', () => {
         const form = document.querySelector('.taskform');
         form.textContent = ''
         form.style.cssText = "display: none"
-        displayAllTasks()
+        //displayAllTasks()
+        taskLog.entireTaskList
     })
 })

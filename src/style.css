@@ -54,6 +54,12 @@
     grid-area: 2 / 1 / 3 / 2;
 }
 
+.taskContainer {
+    display: flex;
+    gap: 5px;
+    background-color: #bae6fd;
+}
+
 .taskform {
     display: flex;
     flex-direction: column;
