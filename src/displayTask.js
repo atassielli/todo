@@ -11,17 +11,17 @@ export default function displayTask(name, date, project, priority) {
     taskContainer.appendChild(taskName);
 
     let taskDate = document.createElement('div');
-    taskDate.textContent = `${date}`;
+    taskDate.textContent = `Due Date: ${date}`;
     taskDate.classList.add('taskDate');
     taskContainer.appendChild(taskDate);
 
     let taskProject = document.createElement('div');
-    taskProject.textContent = `${project}`;
+    taskProject.textContent = `Project: ${project}`;
     taskProject.classList.add('taskProject');
     taskContainer.appendChild(taskProject);
 
     let taskPriority = document.createElement('div');
-    taskPriority.textContent = `${priority}`;
+    taskPriority.textContent = `Priority: ${priority}`;
     taskPriority.classList.add('taskPriority');
     taskContainer.appendChild(taskPriority);
 }

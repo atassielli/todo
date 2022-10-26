@@ -10,8 +10,8 @@ import Library from './taskLibrary.js';
 import taskCreation from './newTaskCreation.js'
 import {taskLog} from './newTaskCreation.js'
 import visibleTaskList from './visibleTaskList.js';
-import displayAllTasks from './allTaskList';
-
+import hideNewTaskForm from './hideNewTaskForm.js';
+import getTodayDate from './getTodayDate.js';
 
 homepage();
 sidebar();
@@ -29,10 +29,7 @@ button.addEventListener('click', () => {
         } else {
             return
         }
-        const form = document.querySelector('.taskform');
-        form.textContent = ''
-        form.style.cssText = "display: none"
-        //displayAllTasks()
-        taskLog.entireTaskList
+        hideNewTaskForm();
+        taskLog.todayTasks;
     })
 })
