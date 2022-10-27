@@ -38,6 +38,11 @@
     font-size: 16px;
 }
 
+.projectNames {
+    display: flex;
+    flex-direction: column;
+}
+
 .mainBody {
     grid-area: 2 / 2 / 3 / 3;
     background-color: #f0f9ff;

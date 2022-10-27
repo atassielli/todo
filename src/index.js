@@ -12,6 +12,8 @@ import {taskLog} from './newTaskCreation.js'
 import visibleTaskList from './visibleTaskList.js';
 import hideNewTaskForm from './hideNewTaskForm.js';
 import getTodayDate from './getTodayDate.js';
+import {generateProjectList} from './createProject.js'
+import clearProjectList from './clearProjectList';
 
 homepage();
 sidebar();
@@ -30,6 +32,9 @@ button.addEventListener('click', () => {
             return
         }
         hideNewTaskForm();
-        taskLog.todayTasks;
+        //clearProjectList();
+        taskLog.projectList;
+        generateProjectList();
+        taskLog.entireTaskList;
     })
 })

@@ -16,10 +16,10 @@ export default function sidebar() {
     todayButton.textContent = "Today";
     sidebarSection.appendChild(todayButton);
 
-    let weekButton = document.createElement('button');
-    weekButton.classList.add('sidebarButton');
-    weekButton.textContent = "This Week";
-    sidebarSection.appendChild(weekButton);
+    let monthButton = document.createElement('button');
+    monthButton.classList.add('sidebarButton');
+    monthButton.textContent = "This Month";
+    sidebarSection.appendChild(monthButton);
 
     let projectButton = document.createElement('button');
     projectButton.classList.add('sidebarButton');

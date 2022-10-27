@@ -1,7 +1,9 @@
 import Task from "./taskfactory.js";
 import displayTask from "./displayTask.js";
 import getTodayDate from "./getTodayDate.js";
-import getWeekDate from "./getWeekDate.js";
+import getMonthDate from "./getMonthDate.js";
+import createProject from "./createProject.js";
+import { projectLibrary } from "./createProject.js";
 
 export default class Library {
     constructor() {
@@ -30,7 +32,17 @@ export default class Library {
           }
         })
     }
-    get weekTasks() {
-        console.log(getTodayDate()-7)
+    get monthTasks() {
+        this.tasks.forEach(function(item) {
+            if (item.month === getMonthDate()) {
+              displayTask(item.name, item.date, item.project, item.priority);
+            }
+        })
+    }
+    get projectList() {
+      this.tasks.forEach(function (item) {
+        projectLibrary.push(item.project);
+      })
+      console.log(projectLibrary)
     }
 }
