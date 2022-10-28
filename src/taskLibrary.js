@@ -4,6 +4,7 @@ import getTodayDate from "./getTodayDate.js";
 import getMonthDate from "./getMonthDate.js";
 import createProject from "./createProject.js";
 import { projectLibrary } from "./createProject.js";
+import { filteredProjectList } from "./createProject.js";
 
 export default class Library {
     constructor() {
@@ -40,9 +41,9 @@ export default class Library {
         })
     }
     get projectList() {
-      this.tasks.forEach(function (item) {
-        projectLibrary.push(item.project);
-      })
-      console.log(projectLibrary)
+        this.tasks.forEach(function(item) {
+            projectLibrary.push(item.project)
+        })
+        filteredProjectList();
     }
 }

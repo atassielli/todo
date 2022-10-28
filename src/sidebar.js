@@ -23,6 +23,7 @@ export default function sidebar() {
 
     let projectButton = document.createElement('button');
     projectButton.classList.add('sidebarButton');
+    projectButton.classList.add('projectButton')
     projectButton.textContent = "Projects";
     sidebarSection.appendChild(projectButton);
 

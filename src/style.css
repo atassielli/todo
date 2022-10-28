@@ -38,9 +38,15 @@
     font-size: 16px;
 }
 
-.projectNames {
+.projectList {
     display: flex;
     flex-direction: column;
+}
+
+.projectListButton {
+    height: 30px;
+    font-weight: 800;
+    font-size: 20px;
 }
 
 .mainBody {
