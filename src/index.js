@@ -41,3 +41,25 @@ let projects = document.querySelector('.projectButton')
 projects.addEventListener('click', function () {
     displayAllProjects();
 })
+
+let taskHome = document.querySelector('.taskButton');
+let content = document.querySelector('.mainbodyContent');
+
+taskHome.addEventListener('click', function () {
+    content.textContent = ''
+    taskLog.entireTaskList
+})
+
+let monthButton = document.querySelector('.monthButton');
+
+monthButton.addEventListener('click', function () {
+    content.textContent = ''
+    taskLog.monthTasks
+})
+
+let todayButton = document.querySelector('.todayButton');
+
+todayButton.addEventListener('click', function () {
+    content.textContent = '';
+    taskLog.todayTasks
+})

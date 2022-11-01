@@ -23,5 +23,18 @@ export default function displayTask(name, date, project, priority) {
     let taskPriority = document.createElement('div');
     taskPriority.textContent = `Priority: ${priority}`;
     taskPriority.classList.add('taskPriority');
-    taskContainer.appendChild(taskPriority);
+
+    function taskColor () {
+        if (priority.toLowerCase() === 'low') {
+            console.log('yellow')
+            taskContainer.style.cssText = "border-left-color:yellow"
+            taskContainer.appendChild(taskPriority);
+        } else {
+            console.log('red')
+            taskContainer.style.cssText = "border-left-color:red"
+            taskContainer.appendChild(taskPriority);
+        }
+    }
+
+    taskColor();
 }

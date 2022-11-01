@@ -8,16 +8,19 @@ export default function sidebar() {
 
     let taskButton = document.createElement('button');
     taskButton.classList.add('sidebarButton');
+    taskButton.classList.add('taskButton')
     taskButton.textContent = "Tasks";
     sidebarSection.appendChild(taskButton);
 
     let todayButton = document.createElement('button');
     todayButton.classList.add('sidebarButton');
+    todayButton.classList.add('todayButton');
     todayButton.textContent = "Today";
     sidebarSection.appendChild(todayButton);
 
     let monthButton = document.createElement('button');
     monthButton.classList.add('sidebarButton');
+    monthButton.classList.add('monthButton');
     monthButton.textContent = "This Month";
     sidebarSection.appendChild(monthButton);
 
