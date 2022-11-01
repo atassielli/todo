@@ -26,7 +26,6 @@ button.addEventListener('click', () => {
     submit.addEventListener('click', () => {
         if (completeFormValidation() === "pass" && priorityFormValidation() === "pass"){
             taskCreation();
-            console.log(taskLog.allTasks)
         } else {
             return
         }

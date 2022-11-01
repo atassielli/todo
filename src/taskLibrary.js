@@ -10,8 +10,8 @@ export default class Library {
     constructor() {
         this.tasks = []
     }
-    newTask(name, date, project, priority) {
-        let t = new Task (name, date, project, priority);
+    newTask(name, date, project, priority, status) {
+        let t = new Task (name, date, project, priority, status);
         this.tasks.push(t);
         return t;
     }
@@ -45,5 +45,8 @@ export default class Library {
             projectLibrary.push(item.project)
         })
         filteredProjectList();
+    }
+    get deleteTask() {
+
     }
 }

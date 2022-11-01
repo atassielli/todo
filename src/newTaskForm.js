@@ -40,7 +40,7 @@ export default function newtask () {
     form.appendChild(getProject);
 
     let priorityTitle = document.createElement('label');
-    priorityTitle.textContent = "Priority:";
+    priorityTitle.textContent = "Priority (Low or High):";
     priorityTitle.setAttribute('for', 'priority');
     form.appendChild(priorityTitle);
 

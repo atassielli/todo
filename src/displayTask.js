@@ -1,4 +1,4 @@
-export default function displayTask(name, date, project, priority) {
+export default function displayTask(name, date, project, priority, status) {
     let content = document.querySelector('.content');
 
     let taskContainer = document.createElement('div');
@@ -37,4 +37,9 @@ export default function displayTask(name, date, project, priority) {
     }
 
     taskColor();
+
+    let taskStatus = document.createElement('button')
+    taskStatus.classList.add('taskStatus');
+    taskStatus.textContent = `Status: ${status}`
+    taskContainer.appendChild(taskStatus)
 }
