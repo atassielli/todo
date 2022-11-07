@@ -23,20 +23,20 @@ export default class Library {
     }
     get entireTaskList() {
        this.tasks.forEach(function(item){
-        displayTask(item.name, item.date, item.project, item.priority)
+        displayTask(item.name, item.date, item.project, item.priority, item.status)
        })
     }
     get todayTasks() {
         this.tasks.forEach(function(item) {
-          if (item.date === getTodayDate()) {
-            displayTask(item.name, item.date, item.project, item.priority);
+          if (item.date == getTodayDate()) {
+            displayTask(item.name, item.date, item.project, item.priority, item.status);
           }
         })
     }
     get monthTasks() {
         this.tasks.forEach(function(item) {
             if (item.month === getMonthDate()) {
-              displayTask(item.name, item.date, item.project, item.priority);
+              displayTask(item.name, item.date, item.project, item.priority, item.status);
             }
         })
     }
