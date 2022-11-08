@@ -1,3 +1,4 @@
+
 export default function displayTask(name, date, project, priority, status) {
     let content = document.querySelector('.content');
 
@@ -40,6 +41,11 @@ export default function displayTask(name, date, project, priority, status) {
 
     let taskStatus = document.createElement('button')
     taskStatus.classList.add('taskStatus');
-    taskStatus.textContent = `Status: ${status}`
+    taskStatus.textContent = `Delete`
     taskContainer.appendChild(taskStatus)
+
+    taskStatus.addEventListener('click', function () {
+        taskStatus.textContent = ''
+        status = "Closed"
+    })
 }

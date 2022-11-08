@@ -1,4 +1,5 @@
 import { filteredProjectList } from "./createProject.js";
+import { taskLog } from './newTaskCreation.js';
 
 let content = document.querySelector('.content');
 
@@ -11,6 +12,12 @@ export default function displayAllProjects () {
     filteredProjectList().forEach(element => {
         showAllProjects(element)
     });
+    let projectButton = document.querySelectorAll('.projectListButton');
+        projectButton.forEach(button => {
+        button.addEventListener('click', function () {
+            taskLog.getOneProjectList(this.textContent)
+        })
+    })
 }
 
 export function showAllProjects (item) {
@@ -20,3 +27,5 @@ export function showAllProjects (item) {
     project.textContent = item;
     projectList.appendChild(project)
 }
+
+

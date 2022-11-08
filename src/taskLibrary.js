@@ -1,4 +1,4 @@
-import Task from "./taskfactory.js";
+import Task from "./taskFactory.js";
 import displayTask from "./displayTask.js";
 import getTodayDate from "./getTodayDate.js";
 import getMonthDate from "./getMonthDate.js";
@@ -23,30 +23,41 @@ export default class Library {
     }
     get entireTaskList() {
        this.tasks.forEach(function(item){
-        displayTask(item.name, item.date, item.project, item.priority, item.status)
+        if(item.status === 'Open') {
+            displayTask(item.name, item.date, item.project, item.priority, item.status)
+        }
        })
     }
     get todayTasks() {
         this.tasks.forEach(function(item) {
-          if (item.date == getTodayDate()) {
+          if (item.date == getTodayDate() && item.status === 'Open') {
             displayTask(item.name, item.date, item.project, item.priority, item.status);
           }
         })
     }
     get monthTasks() {
         this.tasks.forEach(function(item) {
-            if (item.month === getMonthDate()) {
+            if (item.month === getMonthDate() && item.status === 'Open') {
               displayTask(item.name, item.date, item.project, item.priority, item.status);
             }
         })
     }
     get projectList() {
         this.tasks.forEach(function(item) {
-            projectLibrary.push(item.project)
+            if (item.status === "Open") {
+                projectLibrary.push(item.project)
+            }
         })
         filteredProjectList();
     }
-    get deleteTask() {
 
+    getOneProjectList(project) {
+        this.tasks.forEach(function (item) {
+            if (item.project === project) {
+                displayTask(item.name, item.date, item.project, item.priority, item.status)
+            }
+        })
     }
+    
+
 }

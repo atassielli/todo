@@ -2,10 +2,10 @@ import './style.css';
 import homepage from './homepage.js';
 import sidebar from './sidebar.js';
 import mainbody from './mainbody.js';
-import Task from './taskfactory.js';
+import Task from './taskFactory.js';
 import newtask from './newTaskForm.js';
-import {completeFormValidation} from './newtaskValidation.js';
-import {priorityFormValidation} from './newtaskValidation.js';
+import {completeFormValidation} from './newTaskValidation.js';
+import {priorityFormValidation} from './newTaskValidation.js';
 import Library from './taskLibrary.js';
 import taskCreation from './newTaskCreation.js'
 import {taskLog} from './newTaskCreation.js'
@@ -62,3 +62,7 @@ todayButton.addEventListener('click', function () {
     content.textContent = '';
     taskLog.todayTasks
 })
+
+
+
+
