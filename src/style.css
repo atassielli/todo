@@ -76,13 +76,25 @@
 
 .taskContainer {
     display: flex;
+    flex-direction: column;
     gap: 15px;
     background-color: #bae6fd;
     padding: 10px;
-    justify-content: flex-end;
     border-radius: 5px;
     border-left-width: 10px;
     border-left-style: solid;
+}
+
+.upperTaskContainer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px
+}
+
+.lowerTaskContainer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px
 }
 
 .taskName {

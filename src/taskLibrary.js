@@ -52,6 +52,8 @@ export default class Library {
     }
 
     getOneProjectList(project) {
+        let content = document.querySelector('.content');
+        content.textContent = ''
         this.tasks.forEach(function (item) {
             if (item.project === project) {
                 displayTask(item.name, item.date, item.project, item.priority, item.status)
